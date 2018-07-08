@@ -39,4 +39,9 @@ public class CountryController {
 		countryService.deleteCountry(id);
 
 	}	
+	@RequestMapping(value = "/country/{id}/{name}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+	public void deleteCountry1(@PathVariable("id") int id, @PathVariable("name") int name) {
+		countryService.deleteCountry(id);
+
+	}
 }
