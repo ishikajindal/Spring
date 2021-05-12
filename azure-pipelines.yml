@@ -10,8 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task:
- -sc echo $(user name)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -29,9 +27,3 @@ steps:
       echo Write your commands here
       
       echo Hello world $(user name)
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
